@@ -15,8 +15,7 @@ lazy val root = (project in file("."))
     Project.inConfig(Test)(sbtprotoc.ProtocPlugin.protobufConfigSettings),
     PB.targets in Test := Seq(
       scalapb.gen() -> (sourceManaged in Test).value / "scalapb"
-    ),
-    PB.protoSources in Test := Seq(/*file("src/main/protobuf"), */file("src/test/protobuf"))
+    )
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
