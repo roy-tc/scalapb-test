@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package messages;
+
+option java_package = "example";
+option optimize_for = SPEED;
+
+message MyValue {
+    string value = 1;
+}

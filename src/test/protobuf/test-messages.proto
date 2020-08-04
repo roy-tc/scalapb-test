@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package messages;
+
+option java_package = "example";
+option optimize_for = SPEED;
+
+import "messages.proto";
+
+message MyTestMessage {
+    MyValue value = 1;
+}
